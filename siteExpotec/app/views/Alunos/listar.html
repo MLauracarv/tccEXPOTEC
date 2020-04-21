@@ -1,0 +1,12 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de alunos' /}
+
+#{list items:lista, as:'u'}
+		<a href='@{Alunos.editar(u.id)}'>Editar</a> 
+	
+		<a href='@{Alunos.deletar(u.id)}'>Deletar</a>
+	
+		${u.nome} - ${u.curso} - ${u.matricula} - ${u.email} <br/>
+#{/list}
+
+

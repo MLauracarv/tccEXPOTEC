@@ -1,0 +1,53 @@
+#{extends 'main.html' /}
+#{set title:'Formulário' /}
+
+
+
+<form action="@{Alunos.salvar}" method="post">
+	<input type="hidden" name="usu.id" value="${usu?.id}">
+        <div class="card">
+		<div class="card-header">
+        	<strong>Cadastro de aluno</strong> 
+        </div>
+        
+        <div class="row form-group">
+        	<div class="col col-md-3" ><label for="usu-nome" class=" form-control-label">Nome</label></div>
+         	<div class="col-12 col-md-9">
+         	<input id="usu-nome"class="form-control" type="text" name="usu.nome" value="${usu?.nome}"placeholder="Nome" class="form-control">
+            </div>
+   	     </div>
+   	     
+   	       <div class="row form-group">
+        	<div class="col col-md-3" ><label for="usu-curso" class=" form-control-label">Curso</label></div>
+         	<div class="col-12 col-md-9">
+         	<input id="usu-curso"class="form-control" type="text" name="usu.curso" value="${usu?.curso}"placeholder="Curso" class="form-control">
+            </div>
+   	     </div>
+   	     
+   	       <div class="row form-group">
+        	<div class="col col-md-3" ><label for="usu-email" class=" form-control-label">Matrícula</label></div>
+         	<div class="col-12 col-md-9">
+         	<input id="usu-matricula"class="form-control" type="text" name="usu.matricula" value="${usu?.matricula}"placeholder="Matrícula" class="form-control">
+            </div>
+   	     </div>
+   	     
+   	      <div class="row form-group">
+        	<div class="col col-md-3" ><label for="usu-email" class=" form-control-label">Email</label></div>
+         	<div class="col-12 col-md-9">
+         	<input id="usu-email"class="form-control" type="text" name="usu.email" value="${usu?.email}"placeholder="Email" class="form-control">
+            </div>
+   	     </div>
+   	     
+   	     
+   	     <div class="row form-group">
+        	<div class="col col-md-3" ><label for="usu-email" class=" form-control-label">Senha</label></div>
+         	<div class="col-12 col-md-9">
+         	<input id="usu-senha"class="form-control" type="password" name="usu.senha" value="${usu?.senha}"placeholder="Senha" class="form-control">
+            </div>
+   	     </div>
+   	     
+   	     
+
+		<input type="submit" value="Cadastrar" class="btn btn-primary">
+
+</form>
